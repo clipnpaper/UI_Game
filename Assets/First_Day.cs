@@ -8,16 +8,16 @@ public class LoginSystem : MonoBehaviour
     public Text successMessage;
     public Button loginButton;
 
-    // Á¤ÇØÁø ID¿Í PW (ÀÌ ºÎºĞÀº ½ÇÁ¦ ÇÁ·ÎÁ§Æ®¿¡¼­´Â ¼­¹ö¿Í Åë½ÅÇÏ´Â ºÎºĞÀ¸·Î ´ëÃ¼ÇØ¾ß ÇÔ)
+    // ì •í•´ì§„ IDì™€ PW (ì´ ë¶€ë¶„ì€ ì‹¤ì œ í”„ë¡œì íŠ¸ì—ì„œëŠ” ì„œë²„ì™€ í†µì‹ í•˜ëŠ” ë¶€ë¶„ìœ¼ë¡œ ëŒ€ì²´í•´ì•¼ í•¨)
     private string correctID = "admin";
     private string correctPW = "1234";
 
     void Start()
     {
-        // ¼º°ø ¸Ş½ÃÁö¸¦ Ã³À½¿¡´Â ºó »óÅÂ·Î ¼³Á¤
+        // ì„±ê³µ ë©”ì‹œì§€ë¥¼ ì²˜ìŒì—ëŠ” ë¹ˆ ìƒíƒœë¡œ ì„¤ì •
         successMessage.text = "";
 
-        // ·Î±×ÀÎ ¹öÆ°¿¡ Å¬¸¯ ÀÌº¥Æ® Ãß°¡
+        // ë¡œê·¸ì¸ ë²„íŠ¼ì— í´ë¦­ ì´ë²¤íŠ¸ ì¶”ê°€
         loginButton.onClick.AddListener(CheckLogin);
     }
 
@@ -26,14 +26,14 @@ public class LoginSystem : MonoBehaviour
         string enteredID = idInputField.text;
         string enteredPW = pwInputField.text;
 
-        // ID¿Í PW°¡ ÀÏÄ¡ÇÏ¸é ¼º°ø ¸Ş½ÃÁö Ç¥½Ã
+        // IDì™€ PWê°€ ì¼ì¹˜í•˜ë©´ ì„±ê³µ ë©”ì‹œì§€ í‘œì‹œ
         if (enteredID == correctID && enteredPW == correctPW)
         {
-            successMessage.text = "½ºÅ×ÀÌÁö ¼º°ø!";
+            successMessage.text = "ìŠ¤í…Œì´ì§€ ì„±ê³µ!";
         }
         else
         {
-            successMessage.text = "·Î±×ÀÎ ½ÇÆĞ, ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+            successMessage.text = "ë¡œê·¸ì¸ ì‹¤íŒ¨, ë‹¤ì‹œ ì‹œë„í•˜ì„¸ìš”.";
         }
     }
 }
