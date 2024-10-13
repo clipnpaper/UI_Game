@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class LoginSystem : MonoBehaviour
 {
@@ -19,6 +20,44 @@ public class LoginSystem : MonoBehaviour
 
         // 로그인 버튼에 클릭 이벤트 추가
         loginButton.onClick.AddListener(CheckLogin);
+
+        // 입력 필드 기본 동작 제거
+        idInputField.lineType = InputField.LineType.SingleLine;
+        pwInputField.lineType = InputField.LineType.SingleLine;
+    }
+
+    void Update()
+    {
+        HandleTabSwitching();
+    }
+
+    void HandleTabSwitching()
+    {
+        // Tab 키 인식, 필드 간 전환
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (idInputField.isFocused)
+            {
+                SetFocus(pwInputField, false);
+            } else if (pwInputField.isFocused)
+            {
+                SetFocus(idInputField, false);
+            }
+        }
+        // Enter 키 인식, pw 필드에서 로그인 시도
+        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == pwInputField.gameObject)
+        {
+            CheckLogin();
+        }
+    }
+
+    void SetFocus(InputField field, bool reselectText = true)
+    {
+        field.ActivateInputField();
+        if (reselectText) //필드 간 전환시에 Re-selection 방지
+        {
+            field.Select();
+        }
     }
 
     void CheckLogin()
