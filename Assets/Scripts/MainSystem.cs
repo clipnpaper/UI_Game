@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class LoginSystem : MonoBehaviour
+public class MainSystem : MonoBehaviour
 {
     public InputField idInputField;
     public InputField pwInputField;
