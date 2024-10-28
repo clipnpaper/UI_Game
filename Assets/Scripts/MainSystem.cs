@@ -5,15 +5,15 @@ using UnityEngine.EventSystems;
 public class MainSystem : MonoBehaviour
 {
     public InputField idInputField;
-    public InputField pwInputField;
+    public InputField passwordInputField;
     public Text successMessage;
     public Button loginButton;
 
     // 정해진 ID와 PW (이 부분은 실제 프로젝트에서는 서버와 통신하는 부분으로 대체해야 함)
-    private string correctID = "admin";
-    private string correctPW = "1234";
+    protected string correctId = "admin";
+    protected string correctPassword = "1234";
 
-    void Start()
+    protected virtual void Start()
     {
         // 성공 메시지를 처음에는 빈 상태로 설정
         successMessage.text = "";
@@ -26,12 +26,12 @@ public class MainSystem : MonoBehaviour
         pwInputField.lineType = InputField.LineType.SingleLine;
     }
 
-    void Update()
+    protected virtual void Update()
     {
-        HandleTabSwitching();
+        GetKey();
     }
 
-    void HandleTabSwitching()
+    protected void GetKey()
     {
         // Tab 키 인식, 필드 간 전환
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -51,7 +51,7 @@ public class MainSystem : MonoBehaviour
         }
     }
 
-    void SetFocus(InputField field, bool reselectText = true)
+    protected void SetFocus(InputField field, bool reselectText = true)
     {
         field.ActivateInputField();
         if (reselectText) //필드 간 전환시에 Re-selection 방지
@@ -60,13 +60,13 @@ public class MainSystem : MonoBehaviour
         }
     }
 
-    void CheckLogin()
+    protected virtual void CheckLogin()
     {
-        string enteredID = idInputField.text;
-        string enteredPW = pwInputField.text;
+        string enteredId = idInputField.text;
+        string enteredPassword = passwordInputField.text;
 
         // ID와 PW가 일치하면 성공 메시지 표시
-        if (enteredID == correctID && enteredPW == correctPW)
+        if (enteredId == correctId && enteredPassword == correctPassword)
         {
             successMessage.text = "스테이지 성공!";
         }
