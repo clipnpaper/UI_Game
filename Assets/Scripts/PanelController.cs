@@ -26,7 +26,7 @@ public class PanelController : MonoBehaviour
     private IEnumerator SlideIn()
     {
         RectTransform panelRect = configurationPanel.GetComponent<RectTransform>();
-        Vector2 startPos = new Vector2(-panelRect.rect.width, panelRect.anchoredPosition.y);
+        Vector2 startPos = new Vector2(-Screen.width, panelRect.anchoredPosition.y);
         Vector2 endPos = new Vector2(0, panelRect.anchoredPosition.y);
 
         panelRect.anchoredPosition = startPos;
@@ -47,7 +47,7 @@ public class PanelController : MonoBehaviour
     {
         RectTransform panelRect = configurationPanel.GetComponent<RectTransform>();
         Vector2 startPos = panelRect.anchoredPosition;
-        Vector2 endPos = new Vector2(-panelRect.rect.width, panelRect.anchoredPosition.y);
+        Vector2 endPos = new Vector2(-Screen.width, panelRect.anchoredPosition.y);
 
         float elapsedTime = 0f;
         while (elapsedTime < slideDuration)

@@ -13,7 +13,7 @@ public class MainSystem : MonoBehaviour
     protected string correctId = "admin";
     protected string correctPassword = "1234";
 
-    protected virtual void Start()
+    protected void Start()
     {
         // 성공 메시지를 처음에는 빈 상태로 설정
         successMessage.text = "";
@@ -23,10 +23,10 @@ public class MainSystem : MonoBehaviour
 
         // 입력 필드 기본 동작 제거
         idInputField.lineType = InputField.LineType.SingleLine;
-        pwInputField.lineType = InputField.LineType.SingleLine;
+        passwordInputField.lineType = InputField.LineType.SingleLine;
     }
 
-    protected virtual void Update()
+    protected void Update()
     {
         GetKey();
     }
@@ -38,14 +38,14 @@ public class MainSystem : MonoBehaviour
         {
             if (idInputField.isFocused)
             {
-                SetFocus(pwInputField, false);
-            } else if (pwInputField.isFocused)
+                SetFocus(passwordInputField, false);
+            } else if (passwordInputField.isFocused)
             {
                 SetFocus(idInputField, false);
             }
         }
         // Enter 키 인식, pw 필드에서 로그인 시도
-        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == pwInputField.gameObject)
+        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == passwordInputField.gameObject)
         {
             CheckLogin();
         }
@@ -60,7 +60,7 @@ public class MainSystem : MonoBehaviour
         }
     }
 
-    protected virtual void CheckLogin()
+    protected void CheckLogin()
     {
         string enteredId = idInputField.text;
         string enteredPassword = passwordInputField.text;
