@@ -10,6 +10,27 @@ public class PanelController : MonoBehaviour
 
     private bool isPanelVisible = false;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePanel();
+        }
+
+        // 패널 밖을 클릭할 시 패널 사라짐
+        if (isPanelVisible && Input.GetMouseButtonDown(0)) // 좌클릭
+        {
+            RectTransform panelRect = configurationPanel.GetComponent<RectTransform>();
+            Vector2 mousePosition = Input.mousePosition;
+
+            // 마우스 위치가 패널 밖인지 판별
+            if (!RectTransformUtility.RectangleContainsScreenPoint(panelRect, mousePosition, null))
+            {
+                StartCoroutine(SlideOut());
+            }
+        }
+    }
+
     public void TogglePanel()
     {
         if (isPanelVisible)
