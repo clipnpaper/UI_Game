@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 66ef7c33d618f7f4d927aea63ee4149f
+guid: fdef20955fee8bc4bba3c106f54e3c7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2817729679682315875
-    second: settings-gear-svgrepo-com_0
+      213: -8226985160226537668
+    second: titleBtn_0
+  - first:
+      213: -6666545049584887335
+    second: titleBtn_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: settings-gear-svgrepo-com_0
+      name: titleBtn_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 1
+        y: 104
+        width: 410
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +117,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3662a86f6369a1720800000000000000
-      internalID: 2817729679682315875
+      spriteID: c3f7940d590e3dd80800000000000000
+      internalID: -8226985160226537668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titleBtn_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 412
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d99a58299cab73a0800000000000000
+      internalID: -6666545049584887335
       vertices: []
       indices: 
       edges: []
@@ -130,8 +154,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      settings-gear-svgrepo-com_0: 2817729679682315875
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

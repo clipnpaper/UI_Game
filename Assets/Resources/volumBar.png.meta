@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 66ef7c33d618f7f4d927aea63ee4149f
+guid: b592f5691fbd14f419814e370173d45a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2817729679682315875
-    second: settings-gear-svgrepo-com_0
+      213: -468089231932615904
+    second: volumBar_0
+  - first:
+      213: -6005589928330110538
+    second: volumBar_1
+  - first:
+      213: -6045702438991397738
+    second: volumBar_2
+  - first:
+      213: -7370315328087539639
+    second: volumBar_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: settings-gear-svgrepo-com_0
+      name: volumBar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 256
-        height: 256
+        y: 29
+        width: 601
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +123,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3662a86f6369a1720800000000000000
-      internalID: 2817729679682315875
+      spriteID: 0239877d2530189f0800000000000000
+      internalID: -468089231932615904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volumBar_1
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 4
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9583777cbd7aca0800000000000000
+      internalID: -6005589928330110538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volumBar_2
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 4
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c743ac9a9591ca0800000000000000
+      internalID: -6045702438991397738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volumBar_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 601
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940c9ba324167b990800000000000000
+      internalID: -7370315328087539639
       vertices: []
       indices: 
       edges: []
@@ -130,8 +202,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      settings-gear-svgrepo-com_0: 2817729679682315875
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
