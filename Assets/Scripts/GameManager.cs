@@ -6,7 +6,11 @@ public class GameManager : MonoBehaviour
 {
     // 싱글톤 게임매니저 객체
     public static GameManager Instance { get; private set; }
+
+    //[SerializeField] private LevelManager levelManager;
     [SerializeField] private HintManager hintManager;
+    //[SerializeField] private VolumeControlMusic musicManager;
+    //[SerializeField] private VolumeControlSFX sfxManager;
 
     // 객체 하나로 유지
     private void Awake()
