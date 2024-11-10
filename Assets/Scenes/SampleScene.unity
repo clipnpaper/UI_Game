@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1676616413}
-  clickSound: {fileID: 8300000, guid: e914a2a58135e174c822c755e8a46f8d, type: 3}
+  clickSound: {fileID: 8300000, guid: cf559b210b3fdce49badf4999e5bad98, type: 3}
   volumeControlSFX: {fileID: 1958090665}
 --- !u!4 &1470906032
 Transform:
@@ -3088,7 +3088,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1924674095}
-  - component: {fileID: 1924674096}
   - component: {fileID: 1924674097}
   - component: {fileID: 1924674098}
   m_Layer: 0
@@ -3114,20 +3113,6 @@ Transform:
   - {fileID: 319402021}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924674096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924674094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39be3232bd770ef489aa735aaecb627a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 1555768805}
-  audioSource: {fileID: 319402022}
 --- !u!114 &1924674097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3142,7 +3127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1555768805}
   audioSource: {fileID: 319402022}
-  panel: {fileID: 63946657}
+  panel: {fileID: 442986777}
 --- !u!114 &1924674098
 MonoBehaviour:
   m_ObjectHideFlags: 0

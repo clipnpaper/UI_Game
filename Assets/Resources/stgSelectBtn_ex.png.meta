@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stgSelectBtn_ex_0: -4738038476670022086
+      stgSelectBtn_ex_1: 3329024640425795040
+      stgSelectBtn_ex_2: 5692494952974365434
+      stgSelectBtn_ex_3: 3797430234140681457
+      stgSelectBtn_ex_4: 5561555073051699768
+      stgSelectBtn_ex_5: 2319723722212873845
+      stgSelectBtn_ex_6: -7571943041966346049
+      stgSelectBtn_ex_7: 4682647726999520214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
