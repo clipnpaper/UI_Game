@@ -15,6 +15,9 @@ public class MainSystem : MonoBehaviour
 
     protected void Start()
     {
+        // 테스트용, 레벨 1 호출
+        GameManager.Instance.OnLevelStart(1);
+
         // 성공 메시지를 처음에는 빈 상태로 설정
         successMessage.text = "";
 
