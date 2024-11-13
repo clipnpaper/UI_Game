@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: d63c2b2f20411124caac2ffbc3591038
+=======
+guid: 5913253aa397e2c4989037463497c18f
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -37,7 +41,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< Updated upstream
     filterMode: 1
+=======
+    filterMode: 0
+>>>>>>> Stashed changes
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,6 +111,7 @@ TextureImporter:
       name: boxesWhite_0
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 52
         y: 0
         width: 527
@@ -110,6 +119,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+=======
+        x: 63
+        y: 16
+        width: 503
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 28, y: 27, z: 27, w: 28}
+>>>>>>> Stashed changes
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -123,14 +141,24 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 
     internalID: 0
+=======
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+>>>>>>> Stashed changes
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< Updated upstream
     nameFileIdTable: {}
+=======
+    nameFileIdTable:
+      boxesWhite_0: -2851310155428810052
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

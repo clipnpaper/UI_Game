@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,7 +112,7 @@ TextureImporter:
         height: 302
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 42, y: 39, z: 38, w: 41}
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -127,13 +127,13 @@ TextureImporter:
       name: boxes_1
       rect:
         serializedVersion: 2
-        x: 533
+        x: 536
         y: 15
-        width: 504
-        height: 755
+        width: 455
+        height: 752
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 46, y: 49, z: 0, w: 46}
       outline: []
       physicsShape: []
       tessellationDetail: -1
