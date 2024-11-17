@@ -1,81 +1,41 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class MainSystem : MonoBehaviour
 {
     public InputField idInputField;
     public InputField passwordInputField;
-    public Text successMessage;
     public Button loginButton;
-
-    // 정해진 ID와 PW (이 부분은 실제 프로젝트에서는 서버와 통신하는 부분으로 대체해야 함)
-    protected string correctId = "admin";
-    protected string correctPassword = "1234";
-
+    public Button nextStageButton;
+    public GameObject hintPanel; // Panel(힌트)
+    public GameObject successPanel; // Panel(성공)
+    public Slider musicSlider; // Slider 추가
+    
     protected void Start()
     {
-        // 테스트용, 레벨 1 호출
-        GameManager.Instance.OnLevelStart(1);
+        // Panel 초기 상태 설정
+        hintPanel.SetActive(false);
+        successPanel.SetActive(false);
 
-        // 성공 메시지를 처음에는 빈 상태로 설정
-        successMessage.text = "";
-
-        // 로그인 버튼에 클릭 이벤트 추가
-        loginButton.onClick.AddListener(CheckLogin);
-
-        // 입력 필드 기본 동작 제거
-        idInputField.lineType = InputField.LineType.SingleLine;
-        passwordInputField.lineType = InputField.LineType.SingleLine;
+        // StageOne 실행 및 패널 전달
+        StageOne stageOne = gameObject.AddComponent<StageOne>();
+        stageOne.Initialize(idInputField, passwordInputField, loginButton, nextStageButton, hintPanel, successPanel);
     }
 
-    protected void Update()
+    /*public void LoadStageTwo()
     {
-        GetKey();
-    }
-
-    protected void GetKey()
+        Destroy(GetComponent<StageOne>());
+        StageTwo stageTwo = gameObject.AddComponent<StageTwo>();
+        stageTwo.Initialize(idInputField, passwordInputField, loginButton, hintPanel, successPanel);
+    }*/
+    
+    public void LoadNextStage()
     {
-        // Tab 키 인식, 필드 간 전환
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (idInputField.isFocused)
-            {
-                SetFocus(passwordInputField, false);
-            } else if (passwordInputField.isFocused)
-            {
-                SetFocus(idInputField, false);
-            }
-        }
-        // Enter 키 인식, pw 필드에서 로그인 시도
-        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == passwordInputField.gameObject)
-        {
-            CheckLogin();
-        }
+        SceneManager.LoadScene("StageTwoScene");
+        Destroy(GetComponent<StageOne>());
+        StageTwo stageTwo = gameObject.AddComponent<StageTwo>();
+        stageTwo.Initialize(idInputField, passwordInputField, loginButton, hintPanel, successPanel);
     }
 
-    protected void SetFocus(InputField field, bool reselectText = true)
-    {
-        field.ActivateInputField();
-        if (reselectText) //필드 간 전환시에 Re-selection 방지
-        {
-            field.Select();
-        }
-    }
-
-    protected void CheckLogin()
-    {
-        string enteredId = idInputField.text;
-        string enteredPassword = passwordInputField.text;
-
-        // ID와 PW가 일치하면 성공 메시지 표시
-        if (enteredId == correctId && enteredPassword == correctPassword)
-        {
-            successMessage.text = "스테이지 성공!";
-        }
-        else
-        {
-            successMessage.text = "로그인 실패, 다시 시도하세요.";
-        }
-    }
 }
