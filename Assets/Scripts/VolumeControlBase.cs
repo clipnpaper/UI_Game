@@ -9,8 +9,8 @@ public class VolumeControlBase : MonoBehaviour
     public AudioSource audioSource; // AudioSource
     public RectTransform inputPanel; // InputPanel 연결
 
-    private Vector3 panelStartPosition; // InputPanel의 초기 위치
-    private Vector3 panelTargetPosition; // InputPanel의 이동 목표 위치
+    protected Vector3 panelStartPosition; // InputPanel의 초기 위치
+    protected Vector3 panelTargetPosition; // InputPanel의 이동 목표 위치
 
     // Start is called before the first frame update
     protected virtual void Start()

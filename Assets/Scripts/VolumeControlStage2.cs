@@ -7,8 +7,8 @@ public class VolumeControlStage2 : VolumeControlBase
 
     public RectTransform panel;
 
-    private Vector3 panelStartPosition;
-    private Vector3 panelTargetPosition;
+    //private Vector3 panelStartPosition;
+    //private Vector3 panelTargetPosition;
 
     // Start is called before the first frame update
     protected override void Start()
