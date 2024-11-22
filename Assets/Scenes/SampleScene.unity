@@ -575,7 +575,6 @@ GameObject:
   - component: {fileID: 247346768}
   - component: {fileID: 247346770}
   - component: {fileID: 247346769}
-  - component: {fileID: 247346771}
   m_Layer: 5
   m_Name: "Panel (\uD78C\uD2B8)"
   m_TagString: Untagged
@@ -642,20 +641,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247346767}
   m_CullTransparentMesh: 1
---- !u!114 &247346771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247346767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1cb3d9ea57d0c469cc5ad9c5f43c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintText: {fileID: 1475083553}
-  hintPanel: {fileID: 247346767}
 --- !u!1 &275295315
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintText: {fileID: 1475083553}
-  hintPanel: {fileID: 0}
+  hintPanel: {fileID: 247346767}
 --- !u!4 &338993891
 Transform:
   m_ObjectHideFlags: 0
@@ -1968,9 +1953,9 @@ MonoBehaviour:
   idInputField: {fileID: 462361990}
   passwordInputField: {fileID: 550227104}
   loginButton: {fileID: 442986778}
-  nextStageButton: {fileID: 345925659}
-  hintPanel: {fileID: 247346767}
-  successPanel: {fileID: 883741509}
+  nextStageButton: {fileID: 0}
+  hintPanel: {fileID: 0}
+  successPanel: {fileID: 0}
   musicSlider: {fileID: 0}
 --- !u!114 &852702526
 MonoBehaviour:
@@ -1984,8 +1969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c47a087ea32456ca0318a3ab97d518b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -100
-  maxX: 100
 --- !u!114 &852702527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4017,6 +4000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1555768805}
   audioSource: {fileID: 319402022}
+  inputPanel: {fileID: 0}
   panel: {fileID: 442986777}
 --- !u!114 &1924674098
 MonoBehaviour:
@@ -4032,6 +4016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1555768805}
   audioSource: {fileID: 319402022}
+  inputPanel: {fileID: 0}
 --- !u!1 &1956562592
 GameObject:
   m_ObjectHideFlags: 0
@@ -4221,6 +4206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 962495377}
   audioSource: {fileID: 1676616413}
+  inputPanel: {fileID: 0}
 --- !u!4 &1958090666
 Transform:
   m_ObjectHideFlags: 0
