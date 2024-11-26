@@ -36,31 +36,19 @@ public class StageThree : MonoBehaviour
         // Cancel 버튼 이벤트 추가
         cancelButton.onClick.AddListener(() =>
         {
-            if (idInputField == null || passwordInputField == null)
-            {
-                Debug.LogError("ID 또는 PW 입력 필드가 초기화되지 않았습니다. Initialize 호출을 확인하세요.");
-            }
-            else
-            {
-                CancelIDPW();
-            }
+            Cancel();
         });
     }
 
-    public void CancelIDPW()
+    public void Cancel()
     {
-        // ID와 PW 입력 필드가 null이 아닌지 확인
-        if (idInputField == null || passwordInputField == null)
-        {
-            Debug.LogError("ID 또는 PW 입력 필드가 null입니다. Inspector에서 연결 상태를 확인하세요.");
-            return;
-        }
-
-        // ID와 PW 입력 필드 초기화
-        idInputField.text = string.Empty; // ID 필드 내용을 빈칸으로 설정
-        passwordInputField.text = string.Empty; // PW 필드 내용을 빈칸으로 설정
-
-        Debug.Log("ID와 PW 입력 필드가 초기화되었습니다."); // 디버그 메시지 출력
+        Debug.Log("게임 종료 버튼이 눌렸습니다."); // Unity Editor에서 로그 확인용
+        
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Unity Editor에서 Play 모드 종료
+    #else
+        Application.Quit(); // 빌드된 게임에서 애플리케이션 종료
+    #endif
     }
 
     private void Update()

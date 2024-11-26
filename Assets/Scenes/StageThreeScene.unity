@@ -3924,7 +3924,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978006004}
-  - component: {fileID: 1978006006}
   - component: {fileID: 1978006005}
   m_Layer: 0
   m_Name: MusicControl
@@ -3963,23 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1855433505}
   audioSource: {fileID: 1586594525}
-  inputPanel: {fileID: 1284510064}
---- !u!114 &1978006006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978006003}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3297809a0568a684fa925d78bf2b1657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 1855433505}
-  audioSource: {fileID: 1586594525}
   inputPanel: {fileID: 0}
-  panel: {fileID: 206669440}
 --- !u!1 &1985260268
 GameObject:
   m_ObjectHideFlags: 0
