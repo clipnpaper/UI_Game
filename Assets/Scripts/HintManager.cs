@@ -6,11 +6,17 @@ using TMPro;
 
 public class HintManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text hintText; // 힌트 텍스트 표시 UI
-    [SerializeField] private GameObject hintPanel; // 힌트 패널 오브젝트
-
+    [SerializeField] public TMP_Text hintText; // 힌트 텍스트 표시 UI
+    [SerializeField] public GameObject hintPanel; // 힌트 패널 오브젝트
+    [SerializeField] public Button hintGoBack; // 힌트 확인하고 돌아가기 버튼
+    
     private HintSystem currentHint;
 
+    private void Start()
+    {
+        hintGoBack.onClick.AddListener(HideHint);
+    }
+    
     // 레벨에 맞는 힌트 로드
     public void LoadHintForLevel(int level)
     {
@@ -64,10 +70,6 @@ public class HintManager : MonoBehaviour
         if (hintPanel != null)
         {
             hintPanel.SetActive(false); // 패널 비활성화
-        }
-        if (hintText != null)
-        {
-            hintText.text = ""; // 텍스트 초기화
         }
     }
 }

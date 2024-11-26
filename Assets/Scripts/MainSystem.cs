@@ -30,8 +30,8 @@ public class MainSystem : MonoBehaviour
         //successPanel.SetActive(false);
 
         // StageOne 실행 및 패널 전달
-        //StageOne stageOne = gameObject.AddComponent<StageOne>();
-        //stageOne.Initialize(idInputField, passwordInputField, loginButton, nextStageButton, hintPanel, successPanel);
+        StageOne stageOne = gameObject.AddComponent<StageOne>();
+        stageOne.Initialize(idInputField, passwordInputField, loginButton, nextStageButton, hintPanel, successPanel);
     }
 
     protected void Update()
@@ -91,12 +91,20 @@ public class MainSystem : MonoBehaviour
         stageTwo.Initialize(idInputField, passwordInputField, loginButton, hintPanel, successPanel);
     }*/
     
-    public void LoadNextStage()
+    public void LoadStageTwo()
     {
+        GameManager.Instance.OnLevelStart(2);
         SceneManager.LoadScene("StageTwoScene");
         Destroy(GetComponent<StageOne>());
         StageTwo stageTwo = gameObject.AddComponent<StageTwo>();
-        stageTwo.Initialize(idInputField, passwordInputField, loginButton, hintPanel, successPanel);
+        stageTwo.Initialize(idInputField, passwordInputField, loginButton, nextStageButton, hintPanel, successPanel);
     }
-
+    public void LoadStageThree()
+    {
+        GameManager.Instance.OnLevelStart(3);
+        SceneManager.LoadScene("StageThreeScene");
+        Destroy(GetComponent<StageTwo>());
+        StageThree stageThree = gameObject.AddComponent<StageThree>();
+        stageThree.Initialize(idInputField, passwordInputField, loginButton, nextStageButton, hintPanel, successPanel);
+    }
 }

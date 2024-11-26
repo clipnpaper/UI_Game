@@ -1,19 +1,21 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
-public class StageTwo : MonoBehaviour
+public class StageThree : MonoBehaviour
 {
+    [SerializeField] public Button cancelButton;
+    
     private InputField idInputField;
     private InputField passwordInputField;
     private Button loginButton;
     private Button nextStageButton;
     private GameObject hintPanel; // Panel(힌트)
     private GameObject successPanel; // Panel(성공)
-
+    
     private string correctId = "admin";
     private string correctPassword = "1234";
-
+    
     public void Initialize(InputField idField, InputField pwField, Button loginBt, Button nextBt, GameObject hint, GameObject success)
     {
         idInputField = idField;
@@ -22,13 +24,43 @@ public class StageTwo : MonoBehaviour
         nextStageButton = nextBt;
         hintPanel = hint;
         successPanel = success;
-        nextStageButton = nextStageButton;
 
         // 초기 설정
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
         loginButton.onClick.AddListener(CheckLogin);
-        nextStageButton.onClick.AddListener(MoveToNextStage);
+    }
+
+    private void Start()
+    {
+        // Cancel 버튼 이벤트 추가
+        cancelButton.onClick.AddListener(() =>
+        {
+            if (idInputField == null || passwordInputField == null)
+            {
+                Debug.LogError("ID 또는 PW 입력 필드가 초기화되지 않았습니다. Initialize 호출을 확인하세요.");
+            }
+            else
+            {
+                CancelIDPW();
+            }
+        });
+    }
+
+    public void CancelIDPW()
+    {
+        // ID와 PW 입력 필드가 null이 아닌지 확인
+        if (idInputField == null || passwordInputField == null)
+        {
+            Debug.LogError("ID 또는 PW 입력 필드가 null입니다. Inspector에서 연결 상태를 확인하세요.");
+            return;
+        }
+
+        // ID와 PW 입력 필드 초기화
+        idInputField.text = string.Empty; // ID 필드 내용을 빈칸으로 설정
+        passwordInputField.text = string.Empty; // PW 필드 내용을 빈칸으로 설정
+
+        Debug.Log("ID와 PW 입력 필드가 초기화되었습니다."); // 디버그 메시지 출력
     }
 
     private void Update()
@@ -81,11 +113,5 @@ public class StageTwo : MonoBehaviour
             successPanel.SetActive(false); // 성공 패널 숨기기
             hintPanel.SetActive(true); // 힌트 패널 표시
         }
-    }
-    
-    private void MoveToNextStage()
-    {
-        MainSystem mainSystem = GetComponent<MainSystem>();
-        mainSystem.LoadStageThree();
     }
 }

@@ -86,6 +86,6 @@ public class StageOne : MonoBehaviour
     private void MoveToNextStage()
     {
         MainSystem mainSystem = GetComponent<MainSystem>();
-        mainSystem.LoadNextStage();
+        mainSystem.LoadStageTwo();
     }
 }

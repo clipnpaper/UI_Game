@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 247346768}
   - component: {fileID: 247346770}
   - component: {fileID: 247346769}
+  - component: {fileID: 247346771}
   m_Layer: 5
   m_Name: "Panel (\uD78C\uD2B8)"
   m_TagString: Untagged
@@ -641,6 +642,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247346767}
   m_CullTransparentMesh: 1
+--- !u!114 &247346771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247346767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1cb3d9ea57d0c469cc5ad9c5f43c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintText: {fileID: 1475083553}
+  hintPanel: {fileID: 247346767}
+  hintGoBack: {fileID: 2058376480}
 --- !u!1 &275295315
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 1475083553}
   hintPanel: {fileID: 247346767}
+  hintGoBack: {fileID: 0}
 --- !u!4 &338993891
 Transform:
   m_ObjectHideFlags: 0
@@ -2028,9 +2045,9 @@ MonoBehaviour:
   idInputField: {fileID: 462361990}
   passwordInputField: {fileID: 550227104}
   loginButton: {fileID: 442986778}
-  nextStageButton: {fileID: 0}
-  hintPanel: {fileID: 0}
-  successPanel: {fileID: 0}
+  nextStageButton: {fileID: 345925659}
+  hintPanel: {fileID: 247346767}
+  successPanel: {fileID: 883741509}
   musicSlider: {fileID: 0}
 --- !u!114 &852702526
 MonoBehaviour:
@@ -4280,19 +4297,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247346769}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 76c7c30e4a1bb3449bb47596a454a0a3, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &2058376481
 MonoBehaviour:
   m_ObjectHideFlags: 0
