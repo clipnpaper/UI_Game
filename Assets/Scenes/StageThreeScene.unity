@@ -580,7 +580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 278531090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1537379709}
+        m_TargetAssemblyTypeName: MainSystem, Assembly-CSharp
+        m_MethodName: LoadStageThree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &278531090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2277,7 +2289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9020155074863560642, guid: daf716bf2cd99cf4d95a91aee2f7d3b5, type: 3}
+  m_Sprite: {fileID: -6666545049584887335, guid: fdef20955fee8bc4bba3c106f54e3c7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3353,7 +3365,6 @@ MonoBehaviour:
   idInputField: {fileID: 1070164940}
   passwordInputField: {fileID: 1210833768}
   loginButton: {fileID: 1284510065}
-  nextStageButton: {fileID: 278531089}
   hintPanel: {fileID: 835256870}
   successPanel: {fileID: 980104519}
   musicSlider: {fileID: 0}

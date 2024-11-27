@@ -7,29 +7,29 @@ public class StageOne : MonoBehaviour
     private InputField idInputField;
     private InputField passwordInputField;
     private Button loginButton;
-    private Button nextStageButton;
+    //private Button nextStageButton;
     private GameObject hintPanel; // Panel(힌트)
     private GameObject successPanel; // Panel(성공)
 
     private string correctId = "admin";
     private string correctPassword = "1234";
 
-    public void Initialize(InputField idField, InputField pwField, Button btn, Button nextBtn, GameObject hint, GameObject success)
+    public void Initialize(InputField idField, InputField pwField, Button btn, GameObject hint, GameObject success)
     {
         idInputField = idField;
         passwordInputField = pwField;
         loginButton = btn;
-        nextStageButton = nextBtn;
+        //nextStageButton = nextBtn;
         hintPanel = hint;
         successPanel = success;
 
         // 초기 설정
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
-        nextStageButton.gameObject.SetActive(false); // 다음 스테이지 버튼 숨기기
+        //nextStageButton.gameObject.SetActive(false); // 다음 스테이지 버튼 숨기기
 
         loginButton.onClick.AddListener(CheckLogin);
-        nextStageButton.onClick.AddListener(MoveToNextStage);
+        //nextStageButton.onClick.AddListener(MoveToNextStage);
     }
 
     private void Update()
@@ -73,7 +73,7 @@ public class StageOne : MonoBehaviour
         if (enteredId == correctId && enteredPassword == correctPassword)
         {
             successPanel.SetActive(true); // 성공 패널 표시
-            nextStageButton.gameObject.SetActive(true); // 다음 스테이지 버튼 표시
+            //nextStageButton.gameObject.SetActive(true); // 다음 스테이지 버튼 표시
             hintPanel.SetActive(false); // 힌트 패널 숨기기
         }
         else

@@ -7,28 +7,28 @@ public class StageTwo : MonoBehaviour
     private InputField idInputField;
     private InputField passwordInputField;
     private Button loginButton;
-    private Button nextStageButton;
+    //private Button nextStageButton;
     private GameObject hintPanel; // Panel(힌트)
     private GameObject successPanel; // Panel(성공)
 
     private string correctId = "admin";
     private string correctPassword = "1234";
 
-    public void Initialize(InputField idField, InputField pwField, Button loginBt, Button nextBt, GameObject hint, GameObject success)
+    public void Initialize(InputField idField, InputField pwField, Button loginBt,  GameObject hint, GameObject success)
     {
         idInputField = idField;
         passwordInputField = pwField;
         loginButton = loginBt;
-        nextStageButton = nextBt;
+       // nextStageButton = nextBt;
         hintPanel = hint;
         successPanel = success;
-        nextStageButton = nextStageButton;
+        //nextStageButton = nextStageButton;
 
         // 초기 설정
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
         loginButton.onClick.AddListener(CheckLogin);
-        nextStageButton.onClick.AddListener(MoveToNextStage);
+        //nextStageButton.onClick.AddListener(MoveToNextStage);
     }
 
     private void Update()
