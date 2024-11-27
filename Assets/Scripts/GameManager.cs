@@ -28,9 +28,17 @@ public class GameManager : MonoBehaviour
 
     public void OnLevelStart(int level)
     {
-        if (hintManager != null)
+        // 현재 힌트매니저 탐색
+        HintManager sceneHintManager = FindObjectOfType<HintManager>();
+        if (sceneHintManager != null)
         {
+            hintManager = sceneHintManager; // 레벨 변화시 마다 힌트매니저 재할당
             hintManager.LoadHintForLevel(level);
+            Debug.Log($"Loading hint for level {level}");
+        }
+        else
+        {
+            Debug.LogWarning("No HintManager found in the current scene.");
         }
     }
 }
