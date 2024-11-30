@@ -37,9 +37,10 @@ public class StageOne : MonoBehaviour
 
     private void Update()
     {
-        GetKey();
+        //GetKey();
     }
 
+    /*
     private void GetKey()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -66,7 +67,7 @@ public class StageOne : MonoBehaviour
         {
             field.Select();
         }
-    }
+    }*/
 
     private void CheckLogin()
     {

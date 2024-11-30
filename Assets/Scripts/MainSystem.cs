@@ -101,6 +101,7 @@ public class MainSystem : MonoBehaviour
         stageTwo.Initialize(idInputField, passwordInputField, loginButton, hintButton, hintPanel, successPanel);
         Debug.Log("opening stage 2");
     }
+    
     public void LoadStageThree()
     {
         GameManager.Instance.OnLevelStart(3);
@@ -108,5 +109,6 @@ public class MainSystem : MonoBehaviour
         Destroy(GetComponent<StageTwo>());
         StageThree stageThree = gameObject.AddComponent<StageThree>();
         stageThree.Initialize(idInputField, passwordInputField, loginButton, hintButton, hintPanel, successPanel);
+        Debug.Log("opening stage 3");
     }
 }

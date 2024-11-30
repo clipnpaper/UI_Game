@@ -33,13 +33,26 @@ public class StageThree : MonoBehaviour
         loginButton.onClick.AddListener(CheckLogin);
     }
 
-    private void Start()
+    void Start()
     {
         // Cancel 버튼 이벤트 추가
-        cancelButton.onClick.AddListener(() =>
+        /*cancelButton.onClick.AddListener(() =>
         {
             Cancel();
-        });
+        });*/
+
+        // 초기화 작업
+        Debug.Log("StageThree initialized.");
+        HintManager hintManager = FindObjectOfType<HintManager>();
+        if (hintManager != null)
+        {
+            hintManager.LoadHintForLevel(3);
+            Debug.Log("Hint for level 3 loaded.");
+        }
+        else
+        {
+            Debug.LogError("HintManager not found.");
+        }
     }
 
     public void Cancel()
@@ -55,9 +68,10 @@ public class StageThree : MonoBehaviour
 
     private void Update()
     {
-        GetKey();
+        //GetKey();
     }
 
+    /*
     private void GetKey()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -76,7 +90,7 @@ public class StageThree : MonoBehaviour
         {
             CheckLogin();
         }
-        */
+        
     }
 
     private void SetFocus(InputField field, bool reselectText = true)
@@ -87,6 +101,7 @@ public class StageThree : MonoBehaviour
             field.Select();
         }
     }
+    */
 
     private void ShowHint()
     {
@@ -101,12 +116,12 @@ public class StageThree : MonoBehaviour
         if (enteredId == correctId && enteredPassword == correctPassword)
         {
             successPanel.SetActive(true); // 성공 패널 표시
-            hintPanel.SetActive(false); // 힌트 패널 숨기기
+            //hintPanel.SetActive(false); // 힌트 패널 숨기기
         }
         else
         {
             successPanel.SetActive(false); // 성공 패널 숨기기
-            hintPanel.SetActive(true); // 힌트 패널 표시
+            //hintPanel.SetActive(true); // 힌트 패널 표시
         }
     }
 }

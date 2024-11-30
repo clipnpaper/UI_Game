@@ -33,11 +33,28 @@ public class StageTwo : MonoBehaviour
         //nextStageButton.onClick.AddListener(MoveToNextStage);
     }
 
-    private void Update()
+    void Start()
     {
-        GetKey();
+        // 초기화 작업
+        Debug.Log("StageTwo initialized.");
+        HintManager hintManager = FindObjectOfType<HintManager>();
+        if (hintManager != null)
+        {
+            hintManager.LoadHintForLevel(2);
+            Debug.Log("Hint for level 2 loaded.");
+        }
+        else
+        {
+            Debug.LogError("HintManager not found.");
+        }
     }
 
+    private void Update()
+    {
+        //GetKey();
+    }
+
+    /*
     private void GetKey()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -56,7 +73,7 @@ public class StageTwo : MonoBehaviour
         {
             CheckLogin();
         }
-        */
+        
     }
 
     private void SetFocus(InputField field, bool reselectText = true)
@@ -67,6 +84,7 @@ public class StageTwo : MonoBehaviour
             field.Select();
         }
     }
+    */
 
     private void CheckLogin()
     {
