@@ -9,6 +9,7 @@ public class StageThree : MonoBehaviour
     private InputField idInputField;
     private InputField passwordInputField;
     private Button loginButton;
+    private Button hintButton;
     //private Button nextStageButton;
     private GameObject hintPanel; // Panel(힌트)
     private GameObject successPanel; // Panel(성공)
@@ -16,11 +17,12 @@ public class StageThree : MonoBehaviour
     private string correctId = "admin";
     private string correctPassword = "1234";
     
-    public void Initialize(InputField idField, InputField pwField, Button loginBt, GameObject hint, GameObject success)
+    public void Initialize(InputField idField, InputField pwField, Button loginBt, Button hintBtn, GameObject hint, GameObject success)
     {
         idInputField = idField;
         passwordInputField = pwField;
         loginButton = loginBt;
+        hintButton = hintBtn;
         //nextStageButton = nextBt;
         hintPanel = hint;
         successPanel = success;
@@ -84,6 +86,11 @@ public class StageThree : MonoBehaviour
         {
             field.Select();
         }
+    }
+
+    private void ShowHint()
+    {
+        hintPanel.SetActive(true); // 힌트 패널 표시
     }
 
     private void CheckLogin()
