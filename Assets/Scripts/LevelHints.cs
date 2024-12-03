@@ -4,8 +4,7 @@ public class Level1Hint : HintSystem
 {
     public override string GetHint()
     {
-        return "Stage1 Hint";
-        //return "아이디와 패스워드를 모두 입력하셨나요?";
+        return "아이디와 패스워드를 모두 입력하셨나요?";
     }
 }
 
@@ -13,8 +12,7 @@ public class Level2Hint : HintSystem
 {
     public override string GetHint()
     {
-        return "Stage2 Hint";
-        //return "배경음을 확인해 볼까요?";
+        return "배경음을 확인해 볼까요?";
     }
 }
 

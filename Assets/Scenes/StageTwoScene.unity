@@ -855,14 +855,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SoundButtonClick, Assembly-CSharp
-        m_MethodName: PlaySoundClick
-        m_Mode: 1
+      - m_Target: {fileID: 872420394}
+        m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
+        m_MethodName: LoadHintForLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1344,6 +1344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c47a087ea32456ca0318a3ab97d518b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idInputField: {fileID: 0}
+  passwordInputField: {fileID: 0}
+  loginButton: {fileID: 0}
+  hintButton: {fileID: 0}
+  hintPanel: {fileID: 0}
+  successPanel: {fileID: 0}
 --- !u!1 &488686347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +3010,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1457583378}
+        m_TargetAssemblyTypeName: StageTwo, Assembly-CSharp
+        m_MethodName: CheckLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1341262547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3372,6 +3390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c47a087ea32456ca0318a3ab97d518b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idInputField: {fileID: 98235088}
+  passwordInputField: {fileID: 802869208}
+  loginButton: {fileID: 1341262546}
+  hintButton: {fileID: 327406690}
+  hintPanel: {fileID: 578873284}
+  successPanel: {fileID: 124606212}
 --- !u!1 &1540141073
 GameObject:
   m_ObjectHideFlags: 0

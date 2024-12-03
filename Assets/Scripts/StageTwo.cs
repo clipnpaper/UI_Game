@@ -4,13 +4,13 @@ using UnityEngine.EventSystems;
 
 public class StageTwo : MonoBehaviour
 {
-    private InputField idInputField;
-    private InputField passwordInputField;
-    private Button loginButton;
-    private Button hintButton;
+    public InputField idInputField;
+    public InputField passwordInputField;
+    public Button loginButton;
+    public Button hintButton;
     //private Button nextStageButton;
-    private GameObject hintPanel; // Panel(힌트)
-    private GameObject successPanel; // Panel(성공)
+    public GameObject hintPanel; // Panel(힌트)
+    public GameObject successPanel; // Panel(성공)
 
     private string correctId = "admin";
     private string correctPassword = "1234";
@@ -24,69 +24,50 @@ public class StageTwo : MonoBehaviour
        // nextStageButton = nextBt;
         hintPanel = hint;
         successPanel = success;
-        //nextStageButton = nextStageButton;
 
         // 초기 설정
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
-        loginButton.onClick.AddListener(CheckLogin);
-        //nextStageButton.onClick.AddListener(MoveToNextStage);
+    }
+    protected void Start()
+    {
+        // Panel 초기 상태 설정
+        hintPanel.SetActive(false);
+        successPanel.SetActive(false);
+        
+        // 입력 필드 기본 동작 제거
+        idInputField.lineType = InputField.LineType.SingleLine;
+        passwordInputField.lineType = InputField.LineType.SingleLine;
+    }
+    protected void Update()
+    {
+        GetKey();
     }
 
-    void Start()
+    protected void GetKey()
     {
-        // 초기화 작업
-        Debug.Log("StageTwo initialized.");
-        HintManager hintManager = FindObjectOfType<HintManager>();
-        if (hintManager != null)
-        {
-            hintManager.LoadHintForLevel(2);
-            Debug.Log("Hint for level 2 loaded.");
-        }
-        else
-        {
-            Debug.LogError("HintManager not found.");
-        }
-    }
-
-    private void Update()
-    {
-        //GetKey();
-    }
-
-    /*
-    private void GetKey()
-    {
+        // Tab 키 인식, 필드 간 전환
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (idInputField.isFocused)
             {
                 SetFocus(passwordInputField, false);
-            }
-            else if (passwordInputField.isFocused)
+            } else if (passwordInputField.isFocused)
             {
                 SetFocus(idInputField, false);
             }
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == passwordInputField.gameObject)
-        {
-            CheckLogin();
-        }
-        
     }
-
-    private void SetFocus(InputField field, bool reselectText = true)
+    protected void SetFocus(InputField field, bool reselectText = true)
     {
         field.ActivateInputField();
-        if (reselectText)
+        if (reselectText) //필드 간 전환시에 Re-selection 방지
         {
             field.Select();
         }
     }
-    */
-
-    private void CheckLogin()
+    
+    public void CheckLogin()
     {
         string enteredId = idInputField.text;
         string enteredPassword = passwordInputField.text;
@@ -99,13 +80,8 @@ public class StageTwo : MonoBehaviour
         else
         {
             successPanel.SetActive(false); // 성공 패널 숨기기
-            hintPanel.SetActive(true); // 힌트 패널 표시
+            //hintPanel.SetActive(true); // 힌트 패널 표시
         }
-    }
-
-    private void ShowHint()
-    {
-        hintPanel.SetActive(true); // 힌트 패널 표시
     }
     
     private void MoveToNextStage()

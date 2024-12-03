@@ -6,13 +6,13 @@ public class StageThree : MonoBehaviour
 {
     [SerializeField] public Button cancelButton;
     
-    private InputField idInputField;
-    private InputField passwordInputField;
-    private Button loginButton;
-    private Button hintButton;
+    public InputField idInputField;
+    public InputField passwordInputField;
+    public Button loginButton;
+    public Button hintButton;
     //private Button nextStageButton;
-    private GameObject hintPanel; // Panel(힌트)
-    private GameObject successPanel; // Panel(성공)
+    public GameObject hintPanel; // Panel(힌트)
+    public GameObject successPanel; // Panel(성공)
     
     private string correctId = "admin";
     private string correctPassword = "1234";
@@ -33,28 +33,44 @@ public class StageThree : MonoBehaviour
         loginButton.onClick.AddListener(CheckLogin);
     }
 
-    void Start()
+    protected void Start()
     {
-        // Cancel 버튼 이벤트 추가
-        /*cancelButton.onClick.AddListener(() =>
-        {
-            Cancel();
-        });*/
-
-        // 초기화 작업
-        Debug.Log("StageThree initialized.");
-        HintManager hintManager = FindObjectOfType<HintManager>();
-        if (hintManager != null)
-        {
-            hintManager.LoadHintForLevel(3);
-            Debug.Log("Hint for level 3 loaded.");
-        }
-        else
-        {
-            Debug.LogError("HintManager not found.");
-        }
+        // Panel 초기 상태 설정
+        hintPanel.SetActive(false);
+        successPanel.SetActive(false);
+        
+        // 입력 필드 기본 동작 제거
+        idInputField.lineType = InputField.LineType.SingleLine;
+        passwordInputField.lineType = InputField.LineType.SingleLine;
+    }
+    protected void Update()
+    {
+        GetKey();
     }
 
+    protected void GetKey()
+    {
+        // Tab 키 인식, 필드 간 전환
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (idInputField.isFocused)
+            {
+                SetFocus(passwordInputField, false);
+            } else if (passwordInputField.isFocused)
+            {
+                SetFocus(idInputField, false);
+            }
+        }
+    }
+    protected void SetFocus(InputField field, bool reselectText = true)
+    {
+        field.ActivateInputField();
+        if (reselectText) //필드 간 전환시에 Re-selection 방지
+        {
+            field.Select();
+        }
+    }
+    
     public void Cancel()
     {
         Debug.Log("게임 종료 버튼이 눌렸습니다."); // Unity Editor에서 로그 확인용
@@ -66,49 +82,7 @@ public class StageThree : MonoBehaviour
     #endif
     }
 
-    private void Update()
-    {
-        //GetKey();
-    }
-
-    /*
-    private void GetKey()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (idInputField.isFocused)
-            {
-                SetFocus(passwordInputField, false);
-            }
-            else if (passwordInputField.isFocused)
-            {
-                SetFocus(idInputField, false);
-            }
-        }
-        /*
-        if (Input.GetKeyDown(KeyCode.Return) && EventSystem.current.currentSelectedGameObject == passwordInputField.gameObject)
-        {
-            CheckLogin();
-        }
-        
-    }
-
-    private void SetFocus(InputField field, bool reselectText = true)
-    {
-        field.ActivateInputField();
-        if (reselectText)
-        {
-            field.Select();
-        }
-    }
-    */
-
-    private void ShowHint()
-    {
-        hintPanel.SetActive(true); // 힌트 패널 표시
-    }
-
-    private void CheckLogin()
+    public void CheckLogin()
     {
         string enteredId = idInputField.text;
         string enteredPassword = passwordInputField.text;
@@ -123,5 +97,10 @@ public class StageThree : MonoBehaviour
             successPanel.SetActive(false); // 성공 패널 숨기기
             //hintPanel.SetActive(true); // 힌트 패널 표시
         }
+    }
+    private void MoveToNextStage()
+    {
+        MainSystem mainSystem = GetComponent<MainSystem>();
+        mainSystem.LoadStageFour();
     }
 }

@@ -1176,6 +1176,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 852702527}
+        m_TargetAssemblyTypeName: StageOne, Assembly-CSharp
+        m_MethodName: CheckLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &442986779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2061,6 +2073,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8558d6f743ec8264f85181a00ef81461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idInputField: {fileID: 462361990}
+  passwordInputField: {fileID: 550227104}
+  loginButton: {fileID: 442986778}
+  hintButton: {fileID: 1326839721}
+  hintPanel: {fileID: 247346767}
+  successPanel: {fileID: 883741509}
 --- !u!1 &883741509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,6 +3180,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 338993890}
+        m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
+        m_MethodName: LoadHintForLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1326839722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3380,8 +3410,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1555768803
 GameObject:
