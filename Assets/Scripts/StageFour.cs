@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,6 +12,8 @@ public class StageFour : MonoBehaviour
     public Button hintButton;
     //private Button nextStageButton;
     public GameObject hintPanel; // Panel(힌트)
+    public GameObject checkPanel;
+    public TextMeshProUGUI CheckTextUI;
     public GameObject successPanel; // Panel(성공)
     
     private string correctId = "admin";
@@ -18,7 +21,7 @@ public class StageFour : MonoBehaviour
     
     private string outputIDText = "";
     private string outputPWText = "";
-    
+    private string checkText;
     private string[] keyboardRows = new string[]
     {
         "1234567890",
@@ -34,7 +37,7 @@ public class StageFour : MonoBehaviour
         //nextStageButton = nextBt;
         hintPanel = hint;
         successPanel = success;
-
+        
         // 초기 설정
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
@@ -46,6 +49,7 @@ public class StageFour : MonoBehaviour
         // Panel 초기 상태 설정
         hintPanel.SetActive(false);
         successPanel.SetActive(false);
+        checkPanel.SetActive(false);
         
         // 입력 필드 기본 동작 제거
         idInputField.lineType = InputField.LineType.SingleLine;
@@ -130,10 +134,10 @@ public class StageFour : MonoBehaviour
     public void CheckLogin()
     {
         Debug.Log("ResultID : " + outputIDText + "\nResultPW : " + outputPWText);
-        string enteredId = idInputField.text;
-        string enteredPassword = passwordInputField.text;
-
-        if (enteredId == correctId && enteredPassword == correctPassword)
+        checkPanel.SetActive(true);
+        checkText = "ID : " + outputIDText + "\n" + "PW : " + outputPWText;
+        CheckTextUI.text = checkText;
+        if (outputIDText == correctId && outputPWText == correctPassword)
         {
             successPanel.SetActive(true); // 성공 패널 표시
             //hintPanel.SetActive(false); // 힌트 패널 숨기기
@@ -141,9 +145,15 @@ public class StageFour : MonoBehaviour
         else
         {
             successPanel.SetActive(false); // 성공 패널 숨기기
-            //hintPanel.SetActive(true); // 힌트 패널 표시
+            
         }
     }
+
+    public void CheckGoBack()
+    {
+        checkPanel.SetActive(false);
+    }
+    
     private void MoveToNextStage()
     {
         MainSystem mainSystem = GetComponent<MainSystem>();
