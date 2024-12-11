@@ -12,8 +12,8 @@ public class StageTwo : MonoBehaviour
     public GameObject hintPanel; // Panel(힌트)
     public GameObject successPanel; // Panel(성공)
 
-    private string correctId = "admin";
-    private string correctPassword = "1234";
+    //private string correctId = "admin";
+    //private string correctPassword = "1234";
 
     public void Initialize(InputField idField, InputField pwField, Button loginBt, Button hintBtn, GameObject hint, GameObject success)
     {
@@ -29,6 +29,7 @@ public class StageTwo : MonoBehaviour
         successPanel.SetActive(false); // Panel(성공) 숨기기
         hintPanel.SetActive(false); // Panel(힌트) 숨기기
     }
+
     protected void Start()
     {
         // Panel 초기 상태 설정
@@ -39,6 +40,7 @@ public class StageTwo : MonoBehaviour
         idInputField.lineType = InputField.LineType.SingleLine;
         passwordInputField.lineType = InputField.LineType.SingleLine;
     }
+    
     protected void Update()
     {
         GetKey();
@@ -71,6 +73,9 @@ public class StageTwo : MonoBehaviour
     {
         string enteredId = idInputField.text;
         string enteredPassword = passwordInputField.text;
+
+        string correctId = PlayerPrefs.GetString("PlayerID", string.Empty);
+        string correctPassword = PlayerPrefs.GetString("PlayerPassword", string.Empty);
 
         if (enteredId == correctId && enteredPassword == correctPassword)
         {

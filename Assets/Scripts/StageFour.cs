@@ -16,8 +16,8 @@ public class StageFour : MonoBehaviour
     public TextMeshProUGUI CheckTextUI;
     public GameObject successPanel; // Panel(성공)
     
-    private string correctId = "admin";
-    private string correctPassword = "1234";
+    //private string correctId = "admin";
+    //private string correctPassword = "1234";
     
     private string outputIDText = "";
     private string outputPWText = "";
@@ -137,6 +137,10 @@ public class StageFour : MonoBehaviour
         checkPanel.SetActive(true);
         checkText = "ID : " + outputIDText + "\n" + "PW : " + outputPWText;
         CheckTextUI.text = checkText;
+
+        string correctId = PlayerPrefs.GetString("PlayerID", string.Empty);
+        string correctPassword = PlayerPrefs.GetString("PlayerPassword", string.Empty);
+
         if (outputIDText == correctId && outputPWText == correctPassword)
         {
             successPanel.SetActive(true); // 성공 패널 표시

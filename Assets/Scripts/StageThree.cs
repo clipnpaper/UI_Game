@@ -14,8 +14,8 @@ public class StageThree : MonoBehaviour
     public GameObject hintPanel; // Panel(힌트)
     public GameObject successPanel; // Panel(성공)
     
-    private string correctId = "admin";
-    private string correctPassword = "1234";
+    //private string correctId = "admin";
+    //private string correctPassword = "1234";
     
     public void Initialize(InputField idField, InputField pwField, Button loginBt, Button hintBtn, GameObject hint, GameObject success)
     {
@@ -86,6 +86,9 @@ public class StageThree : MonoBehaviour
     {
         string enteredId = idInputField.text;
         string enteredPassword = passwordInputField.text;
+
+        string correctId = PlayerPrefs.GetString("PlayerID", string.Empty);
+        string correctPassword = PlayerPrefs.GetString("PlayerPassword", string.Empty);
 
         if (enteredId == correctId && enteredPassword == correctPassword)
         {

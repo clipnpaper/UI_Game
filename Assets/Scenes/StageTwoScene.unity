@@ -983,13 +983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c452095e7db94ef4eae356c0e99904fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idInputField: {fileID: 98235088}
-  passwordInputField: {fileID: 802869208}
-  loginButton: {fileID: 1341262546}
-  hintButton: {fileID: 327406690}
-  hintPanel: {fileID: 578873284}
-  successPanel: {fileID: 124606212}
-  musicSlider: {fileID: 488562036}
 --- !u!114 &334260075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1332,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488562034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c47a087ea32456ca0318a3ab97d518b, type: 3}
   m_Name: 

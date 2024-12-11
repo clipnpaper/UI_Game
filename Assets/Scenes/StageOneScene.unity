@@ -1178,7 +1178,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 852702527}
         m_TargetAssemblyTypeName: StageOne, Assembly-CSharp
-        m_MethodName: CheckLogin
+        m_MethodName: Register
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2054,13 +2054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c452095e7db94ef4eae356c0e99904fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idInputField: {fileID: 462361990}
-  passwordInputField: {fileID: 550227104}
-  loginButton: {fileID: 442986778}
-  hintButton: {fileID: 1326839721}
-  hintPanel: {fileID: 247346767}
-  successPanel: {fileID: 883741509}
-  musicSlider: {fileID: 0}
 --- !u!114 &852702527
 MonoBehaviour:
   m_ObjectHideFlags: 0

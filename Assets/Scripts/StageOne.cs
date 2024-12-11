@@ -69,6 +69,26 @@ public class StageOne : MonoBehaviour
             field.Select();
         }
     }
+
+    public void Register()
+    {
+        string enteredId = idInputField.text;
+        string enteredPassword = passwordInputField.text;
+
+        if (string.IsNullOrEmpty(enteredId) || string.IsNullOrEmpty(enteredPassword))
+        {
+            Debug.Log("ID and Password cannot be empty.");
+            return;
+        }
+
+        PlayerPrefs.SetString("PlayerID", enteredId);
+        PlayerPrefs.SetString("PlayerPassword", enteredPassword);
+        PlayerPrefs.Save();
+
+        Debug.Log("Registration success");
+        successPanel.SetActive(true);
+    }
+    /*
     public void CheckLogin()
     {
         string enteredId = idInputField.text;
@@ -86,7 +106,7 @@ public class StageOne : MonoBehaviour
             //hintPanel.SetActive(true); // 힌트 패널 표시
         }
     }
-
+    */
     private void MoveToNextStage()
     {
         MainSystem mainSystem = GetComponent<MainSystem>();
