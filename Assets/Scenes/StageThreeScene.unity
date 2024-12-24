@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9020155074863560642, guid: daf716bf2cd99cf4d95a91aee2f7d3b5, type: 3}
+  m_Sprite: {fileID: -4985476095308373143, guid: daf716bf2cd99cf4d95a91aee2f7d3b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1619,11 +1619,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2336,7 +2336,7 @@ RectTransform:
   m_GameObject: {fileID: 1069255531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.63, y: 1.63, z: 1.63}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 721203100}
@@ -2345,7 +2345,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 605, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0.5000001, y: 0.5}
 --- !u!114 &1069255533
 MonoBehaviour:
@@ -3507,13 +3507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c452095e7db94ef4eae356c0e99904fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idInputField: {fileID: 1070164940}
-  passwordInputField: {fileID: 1210833768}
-  loginButton: {fileID: 1284510065}
-  hintButton: {fileID: 705302933}
-  hintPanel: {fileID: 835256870}
-  successPanel: {fileID: 980104519}
-  musicSlider: {fileID: 0}
 --- !u!114 &1537379710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3629,7 +3622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1579880231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3682,7 +3675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB85C\uADF8\uC778"
+  m_Text: "\uD78C\uD2B8\uAC00 \uD544\uC694\uD558\uC2E0\uAC00\uC694?"
 --- !u!222 &1579880233
 CanvasRenderer:
   m_ObjectHideFlags: 0

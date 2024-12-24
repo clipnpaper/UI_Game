@@ -40,6 +40,10 @@ public class MainSystem : MonoBehaviour
         {
             LoadStageFour();
         }
+        else if (currentScene == "Stage5Scene")
+        {
+            LoadStage5();
+        }
     }
     
     public void LoadStageOne()
@@ -63,5 +67,9 @@ public class MainSystem : MonoBehaviour
         SceneManager.LoadScene("StageFourScene");
         Debug.Log("opening stage 4");
     }
-    
+    public void LoadStage5()
+    {
+        SceneManager.LoadScene("Stage5Scene");
+        Debug.Log("opening stage 5");
+    }
 }

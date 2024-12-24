@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CanvasLayer
+    uniqueID: 4133050759
+    locked: 0
   - name: Button
     uniqueID: 3514096349
+    locked: 0
+  - name: PlayerLayer
+    uniqueID: 3925801113
     locked: 0
