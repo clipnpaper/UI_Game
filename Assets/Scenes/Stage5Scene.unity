@@ -964,18 +964,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 400
   jumpForce: 600
-  idleSpriteRight: {fileID: 6044765641507597606, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  idleSpriteLeft: {fileID: 8166822304883188681, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  jumpingSpriteRight: {fileID: -5251323558665319476, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  jumpingSpriteLeft: {fileID: -2881081967727937809, guid: fff8be0f57c519447889f9befde2e065, type: 3}
+  idleSpriteRight: {fileID: 1746678047531103253, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  idleSpriteLeft: {fileID: -8512714901480783286, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  jumpingSpriteRight: {fileID: -409746498589681597, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  jumpingSpriteLeft: {fileID: 6572424011785191364, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
   runningSpritesRight:
-  - {fileID: 5159013571427679020, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  - {fileID: 9170902424559430875, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  - {fileID: -8314624779409570071, guid: fff8be0f57c519447889f9befde2e065, type: 3}
+  - {fileID: -3761789501058016874, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  - {fileID: 6950563801299696155, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  - {fileID: 1096748919789173475, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
   runningSpritesLeft:
-  - {fileID: 711369809112827297, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  - {fileID: -3077652091846432431, guid: fff8be0f57c519447889f9befde2e065, type: 3}
-  - {fileID: 2327948112539037706, guid: fff8be0f57c519447889f9befde2e065, type: 3}
+  - {fileID: 2407305384820814743, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  - {fileID: 3973871229996327023, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
+  - {fileID: 2665698839165580039, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
 --- !u!114 &354467319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,7 +996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6044765641507597606, guid: fff8be0f57c519447889f9befde2e065, type: 3}
+  m_Sprite: {fileID: 1746678047531103253, guid: 9f4d97defba32d942b0ab3a733329f7b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
