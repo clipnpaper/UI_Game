@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 500f;   // 점프 힘
     public float groundDrag = 4f;    // 땅에서의 마찰력 (감속)
     public float airDrag = 2f;       // 공중에서의 마찰력 (감속)
-
+    public Transform mario;
+    public Transform respawnPoint;
+    
     private Rigidbody2D rb;
     private bool isGrounded;
-
+    
     public Animator PlayerAnimator;
     private float lastMoveDirection = 1f; // 마지막 움직임 방향 (1: 오른쪽, -1: 왼쪽)
     private float lastState = 0;
@@ -75,6 +77,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.collider.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+
+        if (collision.collider.CompareTag("Death"))
+        {
+            mario.transform.position = respawnPoint.position;
         }
     }
 
