@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Death
+  - Paddle
+  - Brick
+  - Wall
   layers:
   - Default
   - TransparentFX
