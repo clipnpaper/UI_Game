@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 781723adbd71ae84ab6beee3e258e5e1
+guid: 0f332c48c213c6644a61eb3d655ef02f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4028554777773955131
-    second: Stage 8_resources_0
+      213: -647201446586270368
+    second: AD_0
   - first:
-      213: 7870811670917937931
-    second: Stage 8_resources_1
+      213: -2249634673180535849
+    second: AD_1
   - first:
-      213: 1952148424756554415
-    second: Stage 8_resources_2
+      213: 1535747093570363141
+    second: AD_2
   - first:
-      213: -5626405032665458207
-    second: Stage 8_resources_3
+      213: 6483748350474373036
+    second: AD_3
   - first:
-      213: 5886257192424101566
-    second: Stage 8_resources_4
+      213: 1559845882861382880
+    second: AD_4
   - first:
-      213: -8910223164963582652
-    second: Stage 8_resources_5
+      213: -6508918607398844109
+    second: AD_5
+  - first:
+      213: 2405963833061698458
+    second: AD_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,12 +118,138 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stage 8_resources_0
+      name: AD_0
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 560
-        width: 62
+        x: 0
+        y: 1288
+        width: 749
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d3b1e96bda407f0800000000000000
+      internalID: -647201446586270368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_1
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1288
+        width: 749
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d31cae0f21b7c0e0800000000000000
+      internalID: -2249634673180535849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 749
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f991948d1105510800000000000000
+      internalID: 1535747093570363141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_3
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 714
+        width: 749
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7cc0bb5c6eaf950800000000000000
+      internalID: 6483748350474373036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 749
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecee48e09fa5a510800000000000000
+      internalID: 1559845882861382880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_5
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 140
+        width: 749
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339cf06230daba5a0800000000000000
+      internalID: -6508918607398844109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AD_6
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 0
+        width: 241
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -129,113 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b385b67e93d48e730800000000000000
-      internalID: 4028554777773955131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage 8_resources_1
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 330
-        width: 112
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b0bff0b638dba3d60800000000000000
-      internalID: 7870811670917937931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage 8_resources_2
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 371
-        width: 137
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: faae37e36ac671b10800000000000000
-      internalID: 1952148424756554415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage 8_resources_3
-      rect:
-        serializedVersion: 2
-        x: 593
-        y: 0
-        width: 749
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e95189ce6efae1b0800000000000000
-      internalID: -5626405032665458207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage 8_resources_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 227
-        height: 219
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb6d603dabf20b150800000000000000
-      internalID: 5886257192424101566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage 8_resources_5
-      rect:
-        serializedVersion: 2
-        x: 395
-        y: 0
-        width: 28
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44d83e66d37885480800000000000000
-      internalID: -8910223164963582652
+      spriteID: a9b641cdb53b36120800000000000000
+      internalID: 2405963833061698458
       vertices: []
       indices: 
       edges: []
@@ -250,13 +274,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Stage 8_resources_0: 4028554777773955131
-      Stage 8_resources_1: 7870811670917937931
-      Stage 8_resources_2: 1952148424756554415
-      Stage 8_resources_3: -5626405032665458207
-      Stage 8_resources_4: 5886257192424101566
-      Stage 8_resources_5: -8910223164963582652
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
